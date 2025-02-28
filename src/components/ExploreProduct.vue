@@ -39,7 +39,7 @@ const pros = ref([])
 const length = ref(4)
     
 onMounted(async() => {
-    const response = await fetch('https://dummyjson.com/products?limit=50')
+    const response = await fetch('https://dummyjson.com/products')
     const data = await response.json()
     const allproducts = data.products
     pros.value = allproducts.map((item) => item)

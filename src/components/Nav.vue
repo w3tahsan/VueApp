@@ -27,8 +27,8 @@
                 </div>
                 <div class="menu w-[40%]">
                     <ul class="flex">
-                        <li><a class="text-[#000] font-popo text-[16px] leading-[24px] px-6" href="">Home</a></li>
-                        <li><a class="text-[#000] font-popo text-[16px] leading-[24px] px-6" href="">Contact</a></li>
+                        <li><router-link class="text-[#000] font-popo text-[16px] leading-[24px] px-6" to="/">Home</router-link></li>
+                        <li><router-link class="text-[#000] font-popo text-[16px] leading-[24px] px-6" to="/shop">Shop</router-link></li>
                         <li><a class="text-[#000] font-popo text-[16px] leading-[24px] px-6" href="">About</a></li>
                         <li><a class="text-[#000] font-popo text-[16px] leading-[24px] px-6" href="">Signup</a></li>
                     </ul>
@@ -47,8 +47,13 @@
             </div>
         </div>
     </nav>
+    <router-view></router-view>
 </template>
 
 <script setup>
-    import logo from '@/assets/images/logo.png'
+import logo from '@/assets/images/logo.png'
+import Homepage from '@/pages/Homepage.vue';
+import Shop from '@/pages/Shop.vue';
+
+components:{Homepage, Shop}
 </script>

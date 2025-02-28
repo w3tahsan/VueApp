@@ -1,6 +1,4 @@
 <template>
-    <Nav></Nav>
-
     <section class="pb-[160px]">
         <div class="container">
             <div class="flex">
@@ -25,8 +23,6 @@
     <section class="pb-12">
         <ExploreProduct></ExploreProduct>
     </section>
-
-    <Footer></Footer>
 </template>
 
 <script setup>

@@ -1,6 +1,8 @@
 <template>
-  <Homepage></Homepage>
+  <Nav></Nav>
+  <Footer></Footer>
 </template>
 <script setup>
-  import Homepage from '@/pages/Homepage.vue'
+import Nav from './components/Nav.vue';
+  import Footer from './components/Footer.vue';
 </script>
