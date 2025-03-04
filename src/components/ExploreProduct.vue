@@ -8,7 +8,9 @@
                 <div class="bg-[#F5F5F5] rounded-[4px] flex items-center justify-center p-12">
                     <img :src="product.thumbnail" alt="">
                 </div>
-                <h3 class="text-[16px] font-medium text-[#000] font-popo pt-4">{{ product.title }}</h3>
+                <h3 class="text-[16px] font-medium text-[#000] font-popo pt-4">
+                    <router-link to="/product/details">{{ product.title }}</router-link>
+                </h3>
                 <p class="pt-2 space-x-4">
                     <span class="text-[#DB4444] font-popo text-[16px] font-medium">${{ product.price }}</span>
                     <span class="text-[rgba(0,0,0,0.51)] font-popo text-[16px] font-medium"><del>$160</del></span>
@@ -33,7 +35,9 @@
 </template>
 
 <script setup>
-import {ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+
+import ProductDetails from '@/pages/ProductDetails.vue'
 
 const pros = ref([])
 const length = ref(4)
