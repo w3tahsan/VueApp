@@ -4,35 +4,20 @@
             <div class="flex">
                 <div class="w-[60%]">
                     <div class="flex space-x-4">
-                        <div class="thums w-[25%] space-y-4">
-                            <div class="thumb-item flex bg-[#F5F5F5] py-3 justify-center items-center">
-                                <img :src="thumb" alt="">
-                            </div>
-                            <div class="thumb-item flex bg-[#F5F5F5] py-3 justify-center items-center">
-                                <img :src="thumb" alt="">
-                            </div>
-                            <div class="thumb-item flex bg-[#F5F5F5] py-3 justify-center items-center">
+                        <div class="thums w-[20%] space-y-4">
+                            <div v-for="thumb in pros.images" :key="thumb" class="thumb-item flex bg-[#F5F5F5] py-3 justify-center items-center">
                                 <img :src="thumb" alt="">
                             </div>
                         </div>
-                        <div class="preview w-[75%] flex bg-[#F5F5F5] py-3 justify-center items-center">
-                            <img :src="preview" alt="">
+                        <div class="preview w-[80%] flex bg-[#F5F5F5] py-3 justify-center items-center">
+                            <img :src="pros.images" alt="">
                         </div>
                     </div>
                     <div class="details pt-20">
-                        <h3 class="text-[36px] font-semibold font-popo text[#111827] leading-10 pb-4">Havic HV G-92 Gamepad</h3>
-                        <p class="text-[16px] font-normal font-popo text[#4B5563] leading-6">The St. Louis Meramec Canoe Company was founded by Alfred Wickett in 1922. Wickett had
-previously worked for the Old Town Canoe Co from 1900 to 1914. Manufacturing of the classic
-wooden canoes in Valley Park, Missouri ceased in 1978.</p>
-
-                        <h3 class="text-[36px] font-semibold font-popo text[#111827] leading-10 pb-4 pt-7">Features</h3>
-                        <p class="text-[16px] font-normal font-popo text[#4B5563] leading-6">The St. Louis Meramec Canoe Company was founded by Alfred Wickett in 1922. Wickett had
-previously worked for the Old Town Canoe Co from 1900 to 1914. Manufacturing of the classic
-wooden canoes in Valley Park, Missouri ceased in 1978.</p>
+                        {{ pros.description }}
                         <h3 class="text-[36px] font-semibold font-popo text[#111827] leading-10 pb-4 pt-7">Keywords</h3>
                         <p class="flex space-x-2">
-                            
-                            <a v-for="tag in tags" :key="tag" class="text-[12px] text-[#4B5563] font-popo leading-4 flex space-x-1 px-4 py-2 border border-[#E5E7EB] rounded-4xl" href="">
+                            <a v-for="tag in pros.tags" :key="tag" class="text-[12px] text-[#4B5563] font-popo leading-4 flex space-x-1 px-4 py-2 border border-[#E5E7EB] rounded-4xl" href="">
                             <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.41175 9.27733L4.9375 10.9375L4.46325 9.27733C4.34068 8.8485 4.11086 8.45797 3.79548 8.1426C3.48011 7.82722 3.08958 7.59741 2.66075 7.47483L1 7L2.66017 6.52575C3.089 6.40318 3.47953 6.17336 3.7949 5.85798C4.11027 5.54261 4.34009 5.15208 4.46267 4.72325L4.9375 3.0625L5.41175 4.72267C5.53432 5.1515 5.76414 5.54203 6.07952 5.8574C6.39489 6.17277 6.78542 6.40259 7.21425 6.52517L8.875 7L7.21483 7.47425C6.786 7.59682 6.39547 7.82664 6.0801 8.14202C5.76472 8.45739 5.53432 8.8485 5.41175 9.27733ZM10.3386 5.08375L10.1875 5.6875L10.0364 5.08375C9.94994 4.73759 9.77101 4.42145 9.51877 4.1691C9.26653 3.91676 8.95045 3.7377 8.60433 3.65108L8 3.5L8.60433 3.34892C8.95045 3.2623 9.26653 3.08324 9.51877 2.8309C9.77101 2.57855 9.94994 2.26241 10.0364 1.91625L10.1875 1.3125L10.3386 1.91625C10.4251 2.26248 10.6041 2.57868 10.8565 2.83103C11.1088 3.08338 11.425 3.26239 11.7712 3.34892L12.375 3.5L11.7712 3.65108C11.425 3.73761 11.1088 3.91662 10.8565 4.16897C10.6041 4.42132 10.4251 4.73752 10.3386 5.08375ZM9.54233 11.9974L9.3125 12.6875L9.08267 11.9974C9.01823 11.8041 8.90968 11.6285 8.7656 11.4844C8.62152 11.3403 8.44588 11.2318 8.25258 11.1673L7.5625 10.9375L8.25258 10.7077C8.44588 10.6432 8.62152 10.5347 8.7656 10.3906C8.90968 10.2465 9.01823 10.0709 9.08267 9.87758L9.3125 9.1875L9.54233 9.87758C9.60677 10.0709 9.71532 10.2465 9.8594 10.3906C10.0035 10.5347 10.1791 10.6432 10.3724 10.7077L11.0625 10.9375L10.3724 11.1673C10.1791 11.2318 10.0035 11.3403 9.8594 11.4844C9.71532 11.6285 9.60677 11.8041 9.54233 11.9974Z" stroke="#4B5563" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -42,7 +27,7 @@ wooden canoes in Valley Park, Missouri ceased in 1978.</p>
                     </div>
                 </div>
                 <div class="w-[40%] pl-[70px]">
-                    <h3 class="text-[24px] text-[#000] font-popo font-semibold leading-6">Havic HV G-92 Gamepad</h3>
+                    <h3 class="text-[24px] text-[#000] font-popo font-semibold leading-6">{{ pros.title }}</h3>
                     <div class="flex space-x-2 pt-2 pb-4">
                         <div class="star space-x-1">
                             <i v-for="total in 5" :key="total" class="fa-solid fa-star text-[#FFAD33] text-[14px]"></i>
@@ -52,8 +37,8 @@ wooden canoes in Valley Park, Missouri ceased in 1978.</p>
                         </div>
                     </div>
                     <div class="border-b border-[#000] pb-6">
-                        <h3 class="text-[24px] text-[#000] font-popo font-normal leading-6 pb-6">$192.00</h3>
-                        <p class="text-[14px] text-[#000] font-popo font-normal leading-5">PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
+                        <h3 class="text-[24px] text-[#000] font-popo font-normal leading-6 pb-6">${{ pros.price }}</h3>
+                        <p class="text-[14px] text-[#000] font-popo font-normal leading-5">{{ pros.description }}</p>
                     </div>
                     <div class="colors">
                         <div class="flex gap-x-6 pt-6 items-center">
@@ -142,14 +127,16 @@ const colors = ref(['red', 'green', 'blue', 'purple'])
 const allsize = ref(['S', 'M', 'L', 'XL'])
 const tags = ref(['gadgets', 'electronics', 'technoloy', 'gaming'])
 
+
+
 const count = ref(1)
 const increment = () => {
   count.value++
 }
 const decrement = () => {
     if (count.value > 1 ) {
-        count.value--
-  }
+         count.value--
+    }
 }
 
 const sizes = ref(null)
@@ -166,6 +153,17 @@ onMounted(() => {
     });
   });
 });
+
+const pros = ref([])
+const props = defineProps({
+    id: Number
+})
+onMounted(async() => {
+    const response = await fetch(`https://dummyjson.com/products/${props.id}`)
+    const data = await response.json()
+    pros.value = data
+})
+
 </script>
 
 <style scope>
@@ -177,11 +175,9 @@ button:focus {
   appearance: none;
   margin: 0;
   font: inherit;
-  color: currentColor;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  transform: translateY(-0.075em);
   display: grid;
   place-content: center;
 }

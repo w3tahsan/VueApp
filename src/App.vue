@@ -1,5 +1,6 @@
 <template>
   <Nav></Nav>
+      <router-view></router-view>
   <Footer></Footer>
 </template>
 <script setup>

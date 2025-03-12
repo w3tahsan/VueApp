@@ -6,10 +6,10 @@
         <div class="flex gap-x-7 flex-wrap">
             <div class="w-[23.2%] relative mb-12" v-for="(product, index) in productsLoaded" :key="index">
                 <div class="bg-[#F5F5F5] rounded-[4px] flex items-center justify-center p-12">
-                    <img :src="product.thumbnail" alt="">
+                    <img :src="product.images" alt="">
                 </div>
                 <h3 class="text-[16px] font-medium text-[#000] font-popo pt-4">
-                    <router-link to="/product/details">{{ product.title }}</router-link>
+                    <router-link :to="`/product/details/${product.id}`">{{ product.title }}</router-link>
                 </h3>
                 <p class="pt-2 space-x-4">
                     <span class="text-[#DB4444] font-popo text-[16px] font-medium">${{ product.price }}</span>

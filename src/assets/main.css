@@ -7,8 +7,10 @@
     @apply max-w-[1170px] mx-auto;
 }
 @theme {
-    --font-popo:'Inter'
+    --font-popo:'Inter';
+    --shadow-abc: 0 5px 5px rgba(0, 0, 0, 0.05);
 }
+
 :focus {
     outline: none !important;
     border: none !important;

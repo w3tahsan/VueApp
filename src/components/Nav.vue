@@ -40,20 +40,15 @@
                 <div class="icons w-[15%]">
                     <div class="icon text-right">
                         <a href="" class="text-[28px] text-[#000000]"><i class="fa-regular fa-heart"></i></a>
-                        <a class="text-[28px] text-[#000000] ml-4" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <router-link class="text-[28px] text-[#000000] ml-4" to="/cart"><i class="fa-solid fa-cart-shopping"></i></router-link>
                         <a class="text-[28px] text-[#000000] ml-4" href=""><i class="fa-regular fa-user"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <router-view></router-view>
 </template>
 
 <script setup>
 import logo from '@/assets/images/logo.png'
-import Homepage from '@/pages/Homepage.vue';
-import Shop from '@/pages/Shop.vue';
-
-components:{Homepage, Shop}
 </script>
